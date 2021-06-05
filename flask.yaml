@@ -13,11 +13,11 @@ spec:
        app: backend
    spec:
      containers:
-       - env:
+       - name: backend
+         env:
            - name: FLASK_SERVER_PORT
              value: "9091"
          image: backend
          imagePullPolicy: IfNotPresent
-         name: backend
          resources: {}
 status: {}

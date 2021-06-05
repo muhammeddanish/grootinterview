@@ -17,6 +17,7 @@ spec:
            - name: FLASK_SERVER_PORT
              value: "9091"
          image: backend
+         imagePullPolicy: Never
          name: backend
          resources: {}
 status: {}

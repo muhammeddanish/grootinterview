@@ -23,9 +23,14 @@ spec:
        resources: {}
        volumeMounts:
        - name: nginx-config
-         mountPath: /etc/nginx
+         mountPath: /etc/nginx/nginx.conf
+         subPath: nginx.conf
+         readOnly: true
      volumes:
      - name: nginx-config
        configMap:
        name: nginx-config
+       items:
+         - key: nginx.conf
+           path: nginx.conf
 status: {}

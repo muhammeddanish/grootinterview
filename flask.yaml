@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+     app: backend
+ template:
+   metadata:
+     labels:
+       app: backend
+   spec:
+     containers:
+       - env:
+           - name: FLASK_SERVER_PORT
+             value: "9091"
+         image: backend
+         name: backend
+         resources: {}
+status: {}
